@@ -50,7 +50,7 @@ layout: layout
 
 
                 <!-- Friends Blog -->
-                <% if(config.friends) { %>
+                <% if(config.friends && config.friends.length) { %>
                 <hr>
                 <h5>FRIENDS</h5>
                 <ul class="list-inline">
@@ -262,7 +262,7 @@ layout: layout
                 </section>
                 
                 <!-- Friends Blog -->
-                <% if(config.friends) { %>
+                <% if(config.friends && config.friends.length) { %>
                 <hr>
                 <h5>FRIENDS</h5>
                 <ul class="list-inline">

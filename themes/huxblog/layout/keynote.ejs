@@ -139,7 +139,7 @@ layout: layout
                 <% }%>
 
                 <!-- Friends Blog -->
-                <% if(config.friends) { %>
+                <% if(config.friends && config.friends.length) { %>
                 <hr>
                 <h5>FRIENDS</h5>
                 <ul class="list-inline">
@@ -209,9 +209,7 @@ layout: layout
 <script>
     async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
         anchors.options = {
-          visible: 'always',
-          placement: 'right',
-          icon: '#'
+          icon: '¶'
         };
         anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
     })

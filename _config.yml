@@ -3,97 +3,70 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Kaijun's Blog
-subtitle: To Be A Lean Developer!
-author: Kaijun Chen
-language:
-timezone:
+title: Namita Gad & Associates
+subtitle: Chartered Accountants
+author: Namita Gad
+language: en
+timezone: Asia/Kolkata
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://kaijun.rocks/hexo-theme-huxblog
-root: /hexo-theme-huxblog/
+url: https://www.namitagad.com/blog
+root: /blog/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
 #Custom Setting Start
 
 # Site settings
-SEOTitle: Kaijun的博客 | Kaijun's Blog
+SEOTitle: Namita Gad & Associates | Blog
 header-img: img/home-bg.jpg
-email: Kaijun.cn@gmail.com
+email: ca.namitagad@gmail.com
 description: ""
 keyword: ""
 
-
 # SNS settings
 # RSS: false
-weibo_username:     Demonbane
-zhihu_username:     Demonbane
-github_username:    Kaijun
-twitter_username:   Demonbane_x
-facebook_username:  demonbane.cn
-linkedin_username:  kaijun-chen-42089354
+weibo_username:
+zhihu_username:
+github_username:
+twitter_username:
+facebook_username:
+linkedin_username: namita-gad-79b19a132
 
 # Build settings
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
-
 # Disqus settings
-disqus_username: hexo-theme-huxblog
+# disqus_username: hexo-theme-huxblog
 
 # Duoshuo settings
 # duoshuo_username: kaijun
 # Share component is depend on Comment so we can NOT use share only.
-duoshuo_share: true                     # set to false if you want to use Comment without Sharing
-
+# duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
-# Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ba_track_id:
 
+# Google Analytics
+ga_track_id: # Format: UA-xxxxxx-xx
+ga_domain: namitagad.com
 
 # Sidebar settings
-sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "我要成为魔法师!"
-sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
+sidebar: true  # whether or not using Sidebar.
+sidebar-about-description: "Namita Gad & Associates is making finance easy"
+sidebar-avatar: /img/avatar.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
 
-
 # Friends
-friends: [
-    {
-        title: "Kaijun's Blog",
-        href: "http://blog.kaijun.rocks"
-    },{
-        title: "Hux Blog",
-        href: "http://huangxuan.me"
-    },{
-        title: "Foo",
-        href: "#"
-    },{
-        title: "Bar",
-        href: "#"
-    },{
-        title: "Example Friends",
-        href: "#"
-    },{
-        title: "It helps SEO",
-        href: "#"
-    }
-]
+# [{title, href}]
+friends: []
 
-
-#Custom Setting End
-
-
+## Custom Setting End
 
 # Directory
 source_dir: source
@@ -130,7 +103,7 @@ tag_map:
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
 ## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
+date_format: DD MMM, YYYY
 time_format: HH:mm:ss
 
 # Pagination
@@ -146,6 +119,50 @@ theme: huxblog
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: https://github.com/Kaijun/hexo-theme-huxblog
-  branch: gh-pages
+  # type: git
+  # repo: https://github.com/yogesum/nga-blog
+  # branch: gh-pages
+  type: rsync
+  host: namitagad.com
+  user: nga
+  root: ~/nga/blog
+  args: -avz
+
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - markdown-it-sub
+    - markdown-it-sup
+  anchors: false
+
+# hexo-admin authentification
+admin:
+  username: sammy
+  password_hash: $2a$10$isP3KkzzaHoAdBrPbJLUPumKoINxbh2FheGb7I5fjDn84tarAE64i
+  secret: salina kyle the cat burgler is like nami
+
+# ludoviclefevre/hexo-generator-seo-friendly-sitemap
+sitemap:
+  path: sitemap.xml
+  tag: false
+  category: false
+
+feed:
+  type: rss2
+  path: rss2.xml
+  limit: 20
+  hub:
+  content:
+
+# klugjo/hexo-autolinker
+autolinker:
+  tel: true

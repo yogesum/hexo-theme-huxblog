@@ -1,11 +1,6 @@
-#Hexo-Theme-Huxblog
+# Namita Gad & Associates
 
-> Ported Theme of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), Thank [Huxpro](https://github.com/Huxpro) for designing such a flawless theme.
-
-###[Demo &rarr;](http://kaijun.rocks/hexo-theme-huxblog/)
-
-
-![](http://huangxuan.me/img/blog-desktop.jpg)
+### [Visit](https://www.namitagad.com/blog/)
 
 ## Usage
 
@@ -16,8 +11,8 @@ So i just pushed the whole hexo project for your convenience, all pre settings a
 ##### 1.Init
 
 ```
-git clone https://github.com/Kaijun/hexo-theme-huxblog.git
-cd hexo-theme-huxblog
+git clone https://github.com/yogesum/nga-blog.git
+cd nga-blog
 npm install
 ```
 
@@ -28,18 +23,15 @@ Especially the section:
 ```
 deploy:
   type: git
-  repo: https://github.com/Kaijun/hexo-theme-huxblog
+  repo: https://github.com/yogesum/nga-blog
   branch: gh-pages
 ```
 Replace with your own repo!
 
 ##### 3.Writting/Serve/Deploy
 
-```
+```bash
 hexo new post IMAPOST
 hexo serve // run hexo in local environment
 hexo clean && hexo deploy // hexo will push the static files automatically into the specific branch(gh-pages) of your repo!
 ```
-
-##### 4.Enjoy! 
-Please [**Star**](https://github.com/kaijun/hexo-theme-huxblog/stargazers) this Project if you like it! [**Following**](https://github.com/Kaijun) would also be appreciated!
