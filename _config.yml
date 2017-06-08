@@ -38,7 +38,7 @@ linkedin_username: namita-gad-79b19a132
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 # Disqus settings
-# disqus_username: hexo-theme-huxblog
+disqus_username: namita-gad
 
 # Duoshuo settings
 # duoshuo_username: kaijun
